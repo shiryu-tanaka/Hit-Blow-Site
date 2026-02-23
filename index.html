@@ -10,7 +10,7 @@
 
     <h1>Hit & Blow</h1>
     <!-- ゲーム説明 -->
-    <div class="exp center" id="rule">
+    <div class="exp" id="rule">
       <p>Hit & Blowは、コンピュータが選んだ数字をできるだけ少ない回数で正確に当てるゲームです。</p>
       <h2>基本ルール</h2>
       <div class="rule">
@@ -41,31 +41,35 @@
             <li>Hit：数字と位置の両方が合ってる。</li>
             <li>Blow：数字は合ってるが、位置が違う。</li>
           </ul>
-          <button class="button stop" onclick="toggleHidden()">やめる</button>
+          <button class="button stop" onclick="endGame()">やめる</button>
         </header>
         <main class="game-main">
-          <ol>
-            <li>
-            </li>
-            <li>
-            </li>
-            <li>
-            </li>
-            <li>
-            </li>
-            <li>
-            </li>
-            <li>
-            </li>
-            <li>
-            </li>
-            <li>
-            </li>
-            <li>
-            </li>
-            <li>
-            </li>
-          </ol>
+          <table class="game-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Guess</th>
+                <th>Hit</th>
+                <th>Blow</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th>1</th><td></td><td></td><td></td></tr>
+              <tr><th>2</th><td></td><td></td><td></td></tr>
+              <tr><th>3</th><td></td><td></td><td></td></tr>
+              <tr><th>4</th><td></td><td></td><td></td></tr>
+              <tr><th>5</th><td></td><td></td><td></td></tr>
+              <tr><th>6</th><td></td><td></td><td></td></tr>
+              <tr><th>7</th><td></td><td></td><td></td></tr>
+              <tr><th>8</th><td></td><td></td><td></td></tr>
+              <tr><th>9</th><td></td><td></td><td></td></tr>
+              <tr><th>10</th><td></td><td></td><td></td></tr>
+            </tbody>
+          </table>
+          <div class="guess-container">
+            <input type="text" id="user-guess" placeholder="数字を入力" autocomplete="off">
+            <button class="button submit" onclick="checkGuess()">判定</button>
+          </div>
         </main>
 
       </div>

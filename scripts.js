@@ -11,9 +11,17 @@ function startGame() {
   toggleHidden();
 
   // 桁数を格納
-  let digits = Number(document.getElementById("digits").value);  // Number型に変換(そのままではString型になる)
-  generateAnswer(digits);
+  let digit = Number(document.getElementById("digits").value);  // Number型に変換(そのままではString型になる)
+  generateAnswer(digit);
   
+}
+
+function endGame() {
+  toggleHidden();
+}
+
+function checkGuess() {
+
 }
 
 function toggleHidden() {
