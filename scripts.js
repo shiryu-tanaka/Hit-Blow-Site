@@ -2,8 +2,13 @@ let answer = [];
 let tryCount = 0;
 
 function generateAnswer(digit) {
-  while (answer.length < digit) {
-    answer.push(Math.floor(Math.random() * 10));
+  let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+  for (let i = 0; i < digit; i++) {
+    let index = Math.floor(Math.random() * numbers.length);
+
+    answer.push(numbers[index]);
+    numbers.splice(index, 1);
   }
 }
 
@@ -17,11 +22,14 @@ function startGame() {
 }
 
 function endGame() {
+  answer.splice(0, answer.length);
   toggleHidden();
 }
 
 function checkGuess() {
-
+  const inputData = document.getElementById("user-guess").value;
+  const answerDigits = answer.length;
+  
 }
 
 function toggleHidden() {

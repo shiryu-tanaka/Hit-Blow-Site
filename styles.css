@@ -130,16 +130,23 @@ h1 {
   border-bottom: 1px solid #414868;
 }
 
-.game-main ol {
-  padding-left: 20px;
-  line-height: 2;
-  font-size: 18px;
+.game-table {
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 25px;
 }
 
-.game-main li {
-  border-bottom: 1px dashed #414868;
-  padding: 5px 0;
-  height: 20px;
+.game-table th {
+  background-color: #414868;
+  color: #c0caf5;
+  padding: 8px;
+  border: 1px solid #565f89;
+}
+
+.game-table td {
+  padding: 8px;
+  border: 1px solid #414868;
 }
 
 .guess-container {
@@ -151,7 +158,6 @@ h1 {
   background-color: rgba(26, 27, 38, 0.6);
   border: 2px dashed #565f89;
   border-radius: 16px;
-  margin-top: 30px;
 }
 
 .guess-container input {
