@@ -1,0 +1,28 @@
+body {
+  background-color: #111;
+  color: white;
+}
+
+h1 {
+  color: mediumspringgreen;
+  font-size: 80px;
+  text-shadow: 
+    0 0 5px mediumspringgreen,
+    0 0 10px mediumspringgreen,
+    0 0 15px mediumspringgreen,
+    0 0 20px mediumspringgreen;
+  text-align: center;
+}
+
+.exp, .setup, .game-area {
+  background-color: #2D2D2D;
+  border: solid 2px #FF99FF;
+  border-radius: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Hit & Blow</title>
+  </head>
+  <body>
+    <script src="./scripts.js" defer></script>
+
+    <h1>Hit & Blow</h1>
+    <!-- ゲーム説明 -->
+    <div class="exp center" id="rule">
+      <p>Hit & Blowは、コンピュータが選んだ数字をできるだけ少ない回数で正確に当てるゲームです。</p>
+      <h2>基本ルール</h2>
+      <div class="rule">
+        <ol>
+          <li>答えは、0 ~ 9の数字で作られた並びです。</li>
+          <li>プレイヤーは数字を入力して推測します。</li>
+          <li>入力結果に応じて「Hit」と「Blow」が表示されます。
+            <ul>
+              <li>Hit：数字と位置の両方が合ってる。</li>
+              <li>Blow：数字は合ってるが、位置が違う。</li>
+            </ul>
+          </li>
+        </ol>
+        </div>
+    </div>
+
+      <!-- ゲーム設定 -->
+      <div class="setup" id="setup">
+        <label for="digits">桁数を入力</label>
+        <input id="digits" type="number" min="2" max="6" value="4">
+        <button class="button start" onclick="startGame()">スタート</button>
+      </div>
+
+      <!-- ゲーム画面 -->
+      <div class="game-area hidden" id="game">
+        <header class="hit-blow-exp">
+          <ul>
+            <li>Hit：数字と位置の両方が合ってる。</li>
+            <li>Blow：数字は合ってるが、位置が違う。</li>
+          </ul>
+          <button class="button stop" onclick="toggleHidden()">やめる</button>
+        </header>
+        <main class="game-main">
+          <ol>
+            <li>
+            </li>
+            <li>
+            </li>
+            <li>
+            </li>
+            <li>
+            </li>
+            <li>
+            </li>
+            <li>
+            </li>
+            <li>
+            </li>
+            <li>
+            </li>
+            <li>
+            </li>
+            <li>
+            </li>
+          </ol>
+        </main>
+
+      </div>
+
+  </body>
+</html>
