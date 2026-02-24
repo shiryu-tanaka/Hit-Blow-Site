@@ -11,6 +11,8 @@ guessInput.addEventListener("input", (event) => {
   
   if (data.length === digit && (!isNumber)) {
     judgeButton.disabled = false;
+  } else {
+    judgeButton.disabled = true;
   }
 });
 
@@ -38,6 +40,8 @@ function endGame() {
   answer = [];
   tryCount = 0;
   digit = 0;
+
+  judgeButton.disabled = true;
 
   document.getElementById("user-guess").value = "";
 
