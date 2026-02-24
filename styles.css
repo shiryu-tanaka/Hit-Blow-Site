@@ -25,6 +25,7 @@ h1 {
   border: 1px solid #414868;
   border-radius: 16px;
   max-width: 690px;
+  min-width: 425px;
   margin: 0 auto;
   padding: 30px 40px;
   box-shadow: 0 20px 30px black;
@@ -147,6 +148,13 @@ h1 {
 .game-table td {
   padding: 8px;
   border: 1px solid #414868;
+  letter-spacing: 10px;
+  width: 180px;
+  max-width: 180px;
+}
+
+.secound-column {
+  min-width: 185px;
 }
 
 .guess-container {

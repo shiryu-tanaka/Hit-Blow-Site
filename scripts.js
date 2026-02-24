@@ -2,6 +2,18 @@ let answer = [];
 let tryCount = 0;
 let digit = 0;
 
+const guessInput = document.getElementById("user-guess");
+const judgeButton = document.getElementById("judge-button");
+
+guessInput.addEventListener("input", (event) => {
+  const data = guessInput.value;
+  const isNumber = /\D/.test(data);
+  
+  if (data.length === digit && (!isNumber)) {
+    judgeButton.disabled = false;
+  }
+});
+
 function generateAnswer(digit) {
   let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
@@ -38,15 +50,15 @@ function endGame() {
 }
 
 function checkGuess() {
-  const inputData = document.getElementById("user-guess").value;
+  const guess = document.getElementById("user-guess").value;
   
   let hit = 0;
   let blow = 0;
 
   for (let i = 0; i < digit; i++) {
-    if (answer[i] === Number(inputData[i])) {
+    if (answer[i] === Number(guess[i])) {
       hit++;
-    } else if (answer.includes(Number(inputData[i]))) {
+    } else if (answer.includes(Number(guess[i]))) {
       blow++;
     }
   }
@@ -56,7 +68,7 @@ function checkGuess() {
 
   currentRow.innerHTML = `
     <td>${tryCount + 1}</td>
-    <td>${inputData}</td>
+    <td>${guess}</td>
     <td>${hit}</td>
     <td>${blow}</td>
   `;
@@ -70,6 +82,8 @@ function checkGuess() {
 
   }
   document.getElementById("user-guess").value = "";
+
+  judgeButton.disabled = true;
 }  
 
 
@@ -78,3 +92,4 @@ function toggleHidden() {
   document.getElementById("game").classList.toggle("hidden");
   document.getElementById("setup").classList.toggle("hidden");
 }
+
