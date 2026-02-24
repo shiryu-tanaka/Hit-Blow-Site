@@ -11,12 +11,10 @@ function generateAnswer(digit) {
     answer.push(numbers[index]);
     numbers.splice(index, 1);
   }
-  console.log(answer);
 }
 
 function startGame() {
   toggleHidden();
-  answer = [];
 
   // 桁数を格納
   digit = Number(document.getElementById("digits").value);  // Number型に変換(そのままではString型になる)
@@ -25,7 +23,17 @@ function startGame() {
 }
 
 function endGame() {
-  answer.splice(0, answer.length);
+  answer = [];
+  tryCount = 0;
+  digit = 0;
+
+  document.getElementById("user-guess").value = "";
+
+  const rows = document.querySelectorAll("tbody tr");
+  for (let i = 0; i < rows.length; i++) {
+    rows[i].innerHTML = `<td>${i + 1}</td><td></td><td></td><td></td>`;
+  }
+
   toggleHidden();
 }
 
@@ -46,8 +54,6 @@ function checkGuess() {
   const rows = document.querySelectorAll("tbody tr");
   const currentRow = rows[tryCount];
 
-  console.log(currentRow);
-
   currentRow.innerHTML = `
     <td>${tryCount + 1}</td>
     <td>${inputData}</td>
@@ -63,7 +69,7 @@ function checkGuess() {
   } else if (tryCount === 10) {
 
   }
-
+  document.getElementById("user-guess").value = "";
 }  
 
 
