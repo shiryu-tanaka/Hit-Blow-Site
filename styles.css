@@ -197,3 +197,30 @@ h1 {
   background-color: #b1e37b;
   box-shadow: 0 6px 15px rgba(158, 206, 106, 0.3);
 }
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #24283b;
+  border: 2px  solid #7dcfff;
+  padding: 40px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(125, 207, 255, 0.3);
+}
+
+.modal-content h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}

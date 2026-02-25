@@ -4,6 +4,9 @@ let digit = 0;
 
 const guessInput = document.getElementById("user-guess");
 const judgeButton = document.getElementById("judge-button");
+const modalTitle = document.getElementById("modal-title");
+const modalMessage = document.getElementById("modal-message");
+const resultModal = document.getElementById("result-modal");
 
 guessInput.addEventListener("input", (event) => {
   const data = guessInput.value;
@@ -25,6 +28,7 @@ function generateAnswer(digit) {
     answer.push(numbers[index]);
     numbers.splice(index, 1);
   }
+  console.log(answer);
 }
 
 function startGame() {
@@ -81,10 +85,18 @@ function checkGuess() {
 
 
   if (hit === digit) {
-    alert("クリア");
-  } else if (tryCount === 10) {
+    modalTitle.textContent = "ゲームクリア";
+    modalMessage.textContent = `${tryCount}回でクリアしました！！`;
 
+    resultModal.classList.toggle("hidden");
+
+  } else if (tryCount === 10) {
+    modalTitle.textContent = "ゲームオーバー";
+    modalMessage.textContent = `答えは${answer}でした。`
+
+    resultModal.classList.toggle("hidden");
   }
+
   document.getElementById("user-guess").value = "";
 
   judgeButton.disabled = true;
