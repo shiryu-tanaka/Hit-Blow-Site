@@ -19,8 +19,9 @@ guessInput.addEventListener("input", (event) => {
   }
 });
 
-function generateAnswer(digit) {
+function generateAnswer() {
   let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  digit = Number(document.getElementById("digits").value);  // Number型に変換(そのままではString型になる)
 
   for (let i = 0; i < digit; i++) {
     let index = Math.floor(Math.random() * numbers.length);
@@ -35,25 +36,12 @@ function startGame() {
   toggleHidden();
 
   // 桁数を格納
-  digit = Number(document.getElementById("digits").value);  // Number型に変換(そのままではString型になる)
   generateAnswer(digit);
   
 }
 
 function endGame() {
-  answer = [];
-  tryCount = 0;
-  digit = 0;
-
-  judgeButton.disabled = true;
-
-  document.getElementById("user-guess").value = "";
-
-  const rows = document.querySelectorAll("tbody tr");
-  for (let i = 0; i < rows.length; i++) {
-    rows[i].innerHTML = `<td>${i + 1}</td><td></td><td></td><td></td>`;
-  }
-
+  resetGameState();
   toggleHidden();
 }
 
@@ -100,8 +88,7 @@ function checkGuess() {
   document.getElementById("user-guess").value = "";
 
   judgeButton.disabled = true;
-}  
-
+}
 
 function toggleHidden() {
   document.getElementById("rule").classList.toggle("hidden");
@@ -109,3 +96,29 @@ function toggleHidden() {
   document.getElementById("setup").classList.toggle("hidden");
 }
 
+function playAgain() {
+  resetGameState();
+  generateAnswer();
+  resultModal.classList.toggle("hidden");
+}
+
+function backToTitle() {
+  resetGameState();
+  resultModal.classList.toggle("hidden");
+  toggleHidden();
+}
+
+function resetGameState() {
+  answer = [];
+  tryCount = 0;
+  digit = 0;
+
+  judgeButton.disabled = true;
+
+  document.getElementById("user-guess").value = "";
+
+  const rows = document.querySelectorAll("tbody tr");
+  for (let i = 0; i < rows.length; i++) {
+    rows[i].innerHTML = `<td>${i + 1}</td><td></td><td></td><td></td>`;
+  }
+}

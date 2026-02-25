@@ -224,3 +224,32 @@ h1 {
   font-size: 32px;
   margin-bottom: 15px;
 }
+
+.modal-content p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.button.again-button {
+  background-color: #7dcfff; /* シアン */
+}
+
+.button.again-button:hover {
+  background-color: #a4e1ff;
+  box-shadow: 0 6px 15px rgba(125, 207, 255, 0.3);
+}
+
+.button.end-button {
+  background-color: #f7768e;
+}
+
+.button.end-button:hover {
+  background-color: #ff899f;
+  box-shadow: 0 6px 15px rgba(247, 118, 142, 0.3);
+}
