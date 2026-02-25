@@ -29,15 +29,13 @@ function generateAnswer() {
     answer.push(numbers[index]);
     numbers.splice(index, 1);
   }
-  console.log(answer);
 }
 
 function startGame() {
   toggleHidden();
-
-  // 桁数を格納
-  generateAnswer(digit);
+  generateAnswer();
   
+  guessInput.focus();
 }
 
 function endGame() {
@@ -88,6 +86,8 @@ function checkGuess() {
   document.getElementById("user-guess").value = "";
 
   judgeButton.disabled = true;
+
+  guessInput.focus();
 }
 
 function toggleHidden() {
@@ -100,6 +100,7 @@ function playAgain() {
   resetGameState();
   generateAnswer();
   resultModal.classList.toggle("hidden");
+  guessInput.focus();
 }
 
 function backToTitle() {
