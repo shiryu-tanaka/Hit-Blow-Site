@@ -17,3 +17,10 @@ https://github.com/shiryu-tanaka/Hit-Blow-Site
 - **正規表現**: 正規表現を用いて数値以外の入力を検出できるようにしました
 - **乱数生成**: Math.floor()とMath.random()を用いてランダムな0~9の指定した桁数の文字列を生成します
 - **簡単なCSSアニメーション**: transitionとtransformを用いて滑らかなアニメーションを実現しました
+
+## 参考にした記事
+https://qiita.com/wafuwafu13/items/698230f587ed3c92d45e
+
+https://qiita.com/moko_san/items/49ba6111d98554fe026f
+
+https://developer.mozilla.org/ja/docs/Web/HTML/Reference/Elements/table
