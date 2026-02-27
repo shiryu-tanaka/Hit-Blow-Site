@@ -1,5 +1,5 @@
 # Hit-Blow-Site
-https://github.com/shiryu-tanaka/Hit-Blow-Site
+[https://github.com/shiryu-tanaka/Hit-Blow-Site](https://shiryu-tanaka.github.io/Hit-Blow-Site/)
 
 ## ゲーム画面
 ### タイトル画面
