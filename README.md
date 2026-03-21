@@ -2,6 +2,10 @@
 https://ryu-12dev.github.io/Hit-Blow-Site/
 
 ## ゲーム画面
+### デモ動画
+https://github.com/user-attachments/assets/16f7fcbd-55b1-4039-8cd1-3ea14b3bce6c
+
+
 ### タイトル画面
 <img width="1470" height="956" alt="スクリーンショット 2026-02-25 23 40 11" src="https://github.com/user-attachments/assets/bafd6718-a444-49fc-a7bd-9c2fbe8083b8" />
 
